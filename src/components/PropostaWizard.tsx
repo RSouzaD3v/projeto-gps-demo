@@ -131,7 +131,7 @@ export default function PropostaWizard({
     <div className="fixed inset-0 z-20 flex items-center justify-center bg-black/40">
       <div className="bg-white h-screen overflow-auto rounded-2xl shadow-2xl w-full max-w-3xl p-8 relative">
         <button
-          className="absolute top-5 right-6 text-2xl text-gray-400 hover:text-black"
+          className="absolute md:top-5 top-2 right-3 md:right-6 text-2xl text-gray-400 hover:text-black"
           onClick={onClose}
         >×</button>
 
@@ -143,7 +143,7 @@ export default function PropostaWizard({
         </p>
 
         {/* Barra de etapas */}
-        <div className="flex items-center justify-center gap-8 mb-6">
+        <div className="flex items-center justify-center md:px-0 px-5 gap-8 mb-6">
           {etapas.map((et, idx) => (
             <div key={et.label} className="flex flex-col items-center">
               <div
@@ -157,7 +157,7 @@ export default function PropostaWizard({
               <div className={(idx === step ? "text-black" : "text-gray-400") + " mt-2 text-xs font-semibold"}>
                 {et.label}
               </div>
-              <div className="text-[11px] text-gray-400">{et.descricao}</div>
+              <div className="text-[11px] text-gray-400 hidden md:block">{et.descricao}</div>
             </div>
           ))}
         </div>
